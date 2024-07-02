@@ -1,3 +1,6 @@
+-- Smart working directory
+vim.opt.autochdir = true
+
 -- Set up tabstops
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 0
