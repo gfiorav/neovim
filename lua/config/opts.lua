@@ -25,3 +25,9 @@ vim.cmd("highlight ColorColumn ctermfg=grey")
 -- Reverse split directions
 vim.opt.splitright = true
 vim.opt.splitbelow = true
+
+-- Always open terminal in insert mode
+vim.api.nvim_create_autocmd("TermOpen", {
+    pattern = "*",
+    command = "startinsert",
+})
