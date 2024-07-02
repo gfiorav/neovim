@@ -18,5 +18,11 @@ vim.api.nvim_set_keymap("t", "<C-k>", "<C-\\><C-n><C-w>k", { noremap = true, sil
 vim.api.nvim_set_keymap("n", "<C-l>", "<C-w>l", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("t", "<C-l>", "<C-\\><C-n><C-w>l", { noremap = true, silent = true })
 
+-- Bind L to <C-w>gt in normal
+vim.api.nvim_set_keymap("n", "L", "<C-w>gt", { noremap = true, silent = true })
+
+-- Bind H to <C-w>gT in normal
+vim.api.nvim_set_keymap("n", "H", "<C-w>gT", { noremap = true, silent = true })
+
 -- Bind <C-n> to <C-\><C-n> in terminal mode
 vim.api.nvim_set_keymap("t", "<C-n>", "<C-\\><C-n>", { noremap = true, silent = true })
