@@ -1,3 +1,6 @@
+-- Remove syntax highlighting
+vim.cmd("syntax off")
+
 -- Smart working directory
 vim.opt.autochdir = true
 
