@@ -23,6 +23,7 @@ vim.opt.relativenumber = true
 
 -- Set color column to 88
 vim.opt.colorcolumn = "88"
+vim.cmd("highlight ColorColumn ctermfg=lightgrey")
 
 -- Reverse split directions
 vim.opt.splitright = true
