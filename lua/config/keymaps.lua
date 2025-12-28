@@ -1,6 +1,6 @@
 -- Bind ; to : in normal and visual mode
-vim.api.nvim_set_keymap("n", ";", ":", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("v", ";", ":", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", ";", ":", { noremap = true })
+vim.api.nvim_set_keymap("v", ";", ":", { noremap = true })
 
 -- Bind <C-h> to <C-w>h in normal and terminal mode
 vim.api.nvim_set_keymap("n", "<C-h>", "<C-w>h", { noremap = true, silent = true })
