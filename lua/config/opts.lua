@@ -25,8 +25,12 @@ vim.opt.colorcolumn = "88"
 vim.opt.splitright = true
 vim.opt.splitbelow = true
 
--- Always open terminal in insert mode
+-- Always open terminal in insert mode with relative line numbers
 vim.api.nvim_create_autocmd("TermOpen", {
     pattern = "*",
-    command = "startinsert",
+    callback = function()
+        vim.opt_local.number = true
+        vim.opt_local.relativenumber = true
+        vim.cmd("startinsert")
+    end,
 })
