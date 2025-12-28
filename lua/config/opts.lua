@@ -11,6 +11,10 @@ vim.opt.smarttab = true
 -- Don't highlight search
 vim.opt.hlsearch = false
 
+-- Case insensitive search (smartcase makes it case-sensitive when using uppercase)
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+
 -- Turn syntax highlighting off
 vim.opt.syntax = "off"
 
