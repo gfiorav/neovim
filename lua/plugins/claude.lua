@@ -5,6 +5,7 @@ return {
     },
     keys = {
         { "<leader>cc", "<cmd>ClaudeCodeContinue<cr>", desc = "Continue Claude Code" },
+        { "<leader>cn", "<cmd>ClaudeCode<cr>", desc = "New Claude Code conversation" },
     },
     config = function()
         require("claude-code").setup({
