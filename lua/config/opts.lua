@@ -33,8 +33,28 @@ vim.opt.splitbelow = true
 vim.api.nvim_create_autocmd("TermOpen", {
     pattern = "*",
     callback = function()
-        vim.opt_local.number = true
-        vim.opt_local.relativenumber = true
+        vim.opt_local.number = false
+        vim.opt_local.relativenumber = false
         vim.cmd("startinsert")
+    end,
+})
+
+-- Show line numbers when leaving insert mode in terminal
+vim.api.nvim_create_autocmd("TermLeave", {
+    pattern = "*",
+    callback = function()
+        vim.opt_local.number = false
+        vim.opt_local.relativenumber = true
+        local last = vim.api.nvim_buf_line_count(0)
+        vim.api.nvim_win_set_cursor(0, { last, 0 })
+    end,
+})
+
+-- Hide line numbers when entering insert mode in terminal
+vim.api.nvim_create_autocmd("TermEnter", {
+    pattern = "*",
+    callback = function()
+        vim.opt_local.number = false
+        vim.opt_local.relativenumber = false
     end,
 })
