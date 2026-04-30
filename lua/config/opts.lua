@@ -45,8 +45,6 @@ vim.api.nvim_create_autocmd("TermLeave", {
     callback = function()
         vim.opt_local.number = false
         vim.opt_local.relativenumber = true
-        local last = vim.api.nvim_buf_line_count(0)
-        vim.api.nvim_win_set_cursor(0, { last, 0 })
     end,
 })
 
